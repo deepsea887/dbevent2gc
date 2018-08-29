@@ -104,7 +104,7 @@ class Calendar(db.Model):
         return cal
 
     def deleteMemcache(self):
-        """清楚 MemCache 缓存"""
+        """清除 MemCache 缓存"""
         memcache.delete('%s-%s-%s' %(self.location_id, self._category,
                                   str(self._length)))
 
